@@ -1,0 +1,6 @@
+{
+  "name": "KDrama Stream",
+  "description": "A beautiful KDrama Hindi dubbed video streaming app with full playback controls, categories, and immersive player.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
