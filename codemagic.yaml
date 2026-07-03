@@ -1,0 +1,16 @@
+workflows:
+  android-debug:
+    name: Android Debug
+    instance_type: linux_x2
+    max_build_duration: 60
+    environment:
+      groups:
+        - android_sdk
+    scripts:
+      - name: Build Android APK
+        script: |
+          cd app
+          ./gradlew assembleDebug
+    artifacts:
+      - app/build/outputs/apk/debug/*.apk
+      
