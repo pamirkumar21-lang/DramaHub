@@ -6,11 +6,15 @@ workflows:
     environment:
       groups:
         - android_sdk
-    working_directory: app
     scripts:
+      - name: Initialize Gradle Wrapper
+        script: |
+          cd app
+          gradle wrapper
       - name: Build Android APK
         script: |
+          cd app
           ./gradlew assembleDebug
     artifacts:
-      - build/outputs/apk/debug/*.apk
+      - app/build/outputs/apk/debug/*.apk
       
